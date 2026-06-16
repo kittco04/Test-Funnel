@@ -1,4 +1,4 @@
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby4KuzjGQHfqxRZ2Jw_Y3nSzmHYiwwp7V_zdiZXYiPk/dev";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxHh01B3HPEREjkFitGf_ULQMmF3WY6zb4R8BgakSZMwC1OtJhx8tPwTUlAT7xC4H0Amg/exec";
 
 const form = document.getElementById("lead-form");
 const thankYou = document.getElementById("thank-you");
