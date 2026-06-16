@@ -10,6 +10,7 @@ This is a complete static lead generation website for Federal Land Properties by
 - `google-apps-script.js` - Google Sheets receiver for form leads
 - `README.md` - Setup guide
 - `assets/federal-land-mid-year-sale.jpeg` - Promotional flyer used in the Mid Year Sale section
+- `assets/kitt-kristoffers-co.png` - Leadership photo used in the Kitt Kristoffers Co section
 - `assets/princess-binamira.jpeg` - Property specialist photo used in the specialist section
 - `assets/shy-martinez.jpeg` - Property specialist photo used in the specialist section
 - `assets/romenic-perillo.jpeg` - Property specialist photo used in the specialist section
