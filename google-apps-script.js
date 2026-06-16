@@ -1,4 +1,5 @@
 var SPECIALIST_EMAILS = [
+  "kittkristoffers@gmail.com",
   "cessabinamira.federalland@gmail.com",
   "federalland.smartinez@gmail.com",
   "federalland.rperillo@gmail.com",
