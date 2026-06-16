@@ -1,4 +1,4 @@
-const GOOGLE_SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby4KuzjGQHfqxRZ2Jw_Y3nSzmHYiwwp7V_zdiZXYiPk/dev";
 
 const form = document.getElementById("lead-form");
 const thankYou = document.getElementById("thank-you");
