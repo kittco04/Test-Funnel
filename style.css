@@ -429,19 +429,13 @@ h3 {
 
 .specialist-card {
   display: grid;
-  grid-template-columns: minmax(210px, 0.55fr) minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
   gap: 24px;
-  align-items: stretch;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: clamp(18px, 3vw, 24px);
   background: rgba(255, 255, 255, 0.055);
   box-shadow: var(--shadow);
-}
-
-.specialist-card:nth-child(3) {
-  grid-column: 1 / -1;
-  grid-template-columns: minmax(260px, 0.38fr) minmax(0, 1fr);
 }
 
 .specialist-photo {
@@ -460,6 +454,11 @@ h3 {
   object-position: center top;
 }
 
+.specialist-copy {
+  display: flex;
+  flex-direction: column;
+}
+
 .specialist-copy h3 {
   margin-bottom: 14px;
   color: var(--white);
@@ -476,7 +475,8 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: auto;
+  padding-top: 22px;
 }
 
 .contact-actions a {
@@ -771,13 +771,7 @@ input[type="radio"] {
     grid-template-columns: 1fr;
   }
 
-  .specialist-grid,
-  .specialist-card {
-    grid-template-columns: 1fr;
-  }
-
-  .specialist-card:nth-child(3) {
-    grid-column: auto;
+  .specialist-grid {
     grid-template-columns: 1fr;
   }
 
