@@ -123,6 +123,128 @@ Thank you! A Kitt Legacy Group property specialist will contact you shortly with
 
 Then check your Google Sheet. A new row should appear with the submitted lead details.
 
+## Automatic Lead Notifications
+
+The Google Apps Script can send notifications after each successful form submission.
+
+By default, email notifications are already turned on for:
+
+```text
+cessabinamira.federalland@gmail.com
+federalland.smartinez@gmail.com
+federalland.rperillo@gmail.com
+rd.federalland@yahoo.com
+```
+
+When a lead submits the form, the script will:
+
+1. Save the lead to Google Sheets.
+2. Email the lead details to all four specialists.
+3. Optionally send Telegram, Viber, or SMS alerts if those settings are enabled.
+
+### Enable Email Notifications
+
+Email is enabled in `google-apps-script.js`:
+
+```javascript
+var NOTIFICATION_SETTINGS = {
+  email: true,
+  telegram: false,
+  viber: false,
+  sms: false
+};
+```
+
+After pasting the updated script into Apps Script, click **Deploy -> Manage deployments**, edit your Web App deployment, choose a **New version**, and deploy again.
+
+Google may ask you to authorize permissions for:
+
+```text
+Send email as you
+Connect to an external service
+View and manage spreadsheets
+```
+
+Allow these permissions so notifications can work.
+
+### Optional Telegram Notification
+
+To use Telegram:
+
+1. Open Telegram and message **@BotFather**.
+2. Create a new bot.
+3. Copy the bot token.
+4. Add the bot to a Telegram group or message the bot directly.
+5. Get the chat ID using a Telegram chat ID tool or bot.
+6. In `google-apps-script.js`, replace:
+
+```javascript
+var TELEGRAM_BOT_TOKEN = "PASTE_TELEGRAM_BOT_TOKEN_HERE";
+var TELEGRAM_CHAT_ID = "PASTE_TELEGRAM_CHAT_ID_HERE";
+```
+
+Then turn Telegram on:
+
+```javascript
+telegram: true,
+```
+
+Deploy a new Apps Script version after editing.
+
+### Optional Viber Notification
+
+Viber alerts require a Viber Bot or Viber Business/API setup.
+
+To use Viber:
+
+1. Create or request access to a Viber Bot/API account.
+2. Get your Viber bot token.
+3. Get the receiver ID for the user or group that should receive alerts.
+4. In `google-apps-script.js`, replace:
+
+```javascript
+var VIBER_BOT_TOKEN = "PASTE_VIBER_BOT_TOKEN_HERE";
+var VIBER_RECEIVER_ID = "PASTE_VIBER_RECEIVER_ID_HERE";
+```
+
+Then turn Viber on:
+
+```javascript
+viber: true,
+```
+
+Deploy a new Apps Script version after editing.
+
+### Optional SMS Notification
+
+SMS requires a paid or prepaid SMS provider. In the Philippines, providers may include Semaphore, Twilio, or another local SMS gateway.
+
+The script includes a simple generic SMS setup:
+
+```javascript
+var SMS_API_URL = "PASTE_SMS_PROVIDER_API_URL_HERE";
+var SMS_API_KEY = "PASTE_SMS_PROVIDER_API_KEY_HERE";
+```
+
+The current recipient numbers are:
+
+```text
+639451165855
+639387528661
+639561334430
+639274374749
+```
+
+After adding your provider URL and API key, turn SMS on:
+
+```javascript
+sms: true,
+```
+
+Deploy a new Apps Script version after editing.
+
+Important: each SMS provider uses a slightly different format. If your provider gives different field names, update the `sendSmsNotifications` function in `google-apps-script.js`.
+
 ## Editing Tips
 
 - To change page text, edit `index.html`.
